@@ -104,15 +104,22 @@ body {
   padding: 0 2rem;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 1200px) {
   .detail-item {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .detail-item {
+    padding: 0 .8rem;
   }
 }
 
 .detail-items a {
   color: rgb(162, 149, 138);
   text-decoration: none;
+  vertical-align: middle;
 }
 
 .detail-items a:hover {
