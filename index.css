@@ -233,6 +233,20 @@ body {
 	color: #777;
 }
 
+.modal-header {
+  background-color: #bbac9f;
+}
+
+.modal-title {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+
 /* Fallback for Edge
 -------------------------------------------------- */
 @supports (-ms-ime-align: auto) {
