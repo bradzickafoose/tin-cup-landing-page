@@ -349,6 +349,16 @@ body {
   }
 }
 
+.announcement a {
+  text-decoration: underline;
+}
+
+.announcement a:hover {
+  color: #297bf7;
+  text-decoration-color: #a2958a ;
+}
+
+
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
