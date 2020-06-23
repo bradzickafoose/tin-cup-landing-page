@@ -213,12 +213,13 @@ body {
 .intro {
   width: 55%;
   text-align: center;
-  padding: 25px 40px;
+  padding: 25px 0 25px 40px;
 }
 
 @media (max-width: 1000px) {
   .intro {
     width: 100%;
+    padding: 40px 40px 25px 40px;
   }
 }
 
@@ -289,12 +290,7 @@ body {
 @media (max-width: 1000px) {
   .announcement {
     width: 100%;
-  }
-}
-
-@media (max-width: 380px) {
-  .announcement {
-    padding: 25px 0px;
+    padding: 0 40px 25px;
   }
 }
 
