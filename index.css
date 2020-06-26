@@ -52,7 +52,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 /* Embedded content
@@ -166,17 +166,20 @@ body {
   background-size: cover;
   background-position: bottom;
   color: rgb(26, 67, 129);
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .app {
-  height: 100vh;
+  height: inherit;
   display: flex;
   align-items: center;
+  margin-top: 3em;
 }
 
 @media (max-width: 1200px) {
   .app {
     height: auto;
+    margin-top:2em;
   }
 }
 
@@ -230,9 +233,8 @@ body {
 }
 
 .intro h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -249,10 +251,12 @@ body {
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .detail-item {
-  color: rgb(162, 149, 138);
+  color: rgb(138, 124, 112);
   padding: 0 2rem;
 }
 
@@ -269,7 +273,7 @@ body {
 }
 
 .detail-items a {
-  color: rgb(162, 149, 138);
+  color: rgb(138, 124, 112);
   text-decoration: none;
   vertical-align: middle;
 }
@@ -301,8 +305,7 @@ body {
 }
 
 .announcement h3 {
-  font-family: 'Quicksand', cursive;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 3.2rem;
   background: linear-gradient(90deg, #297bf7, #1a4381);
@@ -434,7 +437,7 @@ body {
 }
 
 .modal-title {
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
 }
 
