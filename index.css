@@ -148,6 +148,8 @@ video {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   background-image: linear-gradient(
     90deg,
     var(--color-white),
