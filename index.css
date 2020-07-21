@@ -47,10 +47,6 @@ html {
   overflow-x: hidden;
   scroll-padding: 10em 0 0 0;
 }
-html,
-body {
-  height: 100%;
-}
 body {
   overflow-x: hidden;
   display: flex;
