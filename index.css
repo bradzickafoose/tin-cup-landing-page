@@ -327,6 +327,18 @@ footer {
   transition: opacity 0.3s ease-in-out;
   text-decoration: none;
 }
+.fade-in {
+  opacity: 0;
+  animation: fade-in 0.8s ease-out forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Fallback for Edge
 -------------------------------------------------- */
