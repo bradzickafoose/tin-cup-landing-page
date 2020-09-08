@@ -5,7 +5,8 @@
   --color-grey: #495057;
   --color-blue: #1a4381;
   --color-blue-tint: #297bf7;
-  --color-tan: #978c83;
+  --color-tan: #7c736a;
+  --color-light-tan: #bfb8af;
   --color-shadow: rgba(0, 0, 0, 0.1);
   --color-shadow-dark: rgba(0, 0, 0, 0.2);
   --color-text: var(--color-blue);
@@ -21,8 +22,8 @@
   --space-x-large: 3em;
   --space-xx-large: 4em;
   --space-xxx-large: 6em;
-  --font-sans: 'Quicksand', 'Helvetica Neue', helvetica, 'Apple Color Emoji',
-    arial, sans-serif;
+  --font-heading: 'Raleway', sans-serif;
+  --font-sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --type-xxx-small: 55%;
   --type-xx-small: 65%;
   --type-x-small: 75%;
@@ -31,7 +32,7 @@
   --type-large: 125%;
   --type-x-large: 150%;
   --type-xx-large: 200%;
-  --type-xxx-large: 300%;
+  --type-xxx-large: 250%;
 }
 *,
 *::before,
@@ -56,9 +57,14 @@ body {
   padding: 0;
   font-family: var(--font-sans);
   color: var(--color-blue);
-  background: url('/assets/background-beach.jpg') no-repeat center center fixed;
+  background: url('/assets/background-hotel-mobile.jpg') no-repeat center bottom
+    fixed;
   background-size: cover;
-  background-position: bottom;
+}
+@media (min-width: 45em) {
+  body {
+    background-image: url('/assets/background-hotel.jpg');
+  }
 }
 a {
   margin: 0;
@@ -86,7 +92,8 @@ h5,
 h6 {
   margin: var(--space-x-small) 0 var(--space-x-small) 0;
   padding: 0;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 600;
   line-height: 1.25;
 }
 h1 {
@@ -131,13 +138,13 @@ video {
     var(--color-link) 0%,
     var(--color-blue-tint) 100%
   ) !important;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 .btn:hover {
   color: var(--color-sheet);
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 0 0 0.1rem var(--color-accent);
+  box-shadow: 0 0 0 0.1rem var(--color-light-tan);
 }
 .page {
   padding-top: 3em;
@@ -192,7 +199,7 @@ video {
 .intro h2 {
   text-transform: uppercase;
 }
-.intro img {
+.intro .logo {
   margin-top: var(--space-large);
 }
 .detail-items {
@@ -244,6 +251,8 @@ video {
 }
 .announcement h3 {
   background: linear-gradient(90deg, var(--color-blue-tint), var(--color-blue));
+  text-transform: uppercase;
+  font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -262,7 +271,7 @@ video {
 .form-label-group > label {
   height: 3.125rem;
   padding: 0.75rem;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 .form-label-group > label {
   position: absolute;
@@ -299,15 +308,37 @@ video {
   border-radius: 1.5em;
 }
 .modal-header {
-  background-color: var(--color-tan);
+  background-color: var(--color-stone);
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
+  border-bottom: none;
 }
-.modal-title {
-  color: var(--color-white);
+.modal-header .modal-title,
+.modal-header .close,
+.modal-content {
+  color: var(--color-tan);
 }
-.close:hover {
-  color: var(--color-white);
+.modal-header .close:hover {
+  color: var(--color-light-tan);
+}
+.modal-content h3 {
+  font-size: var(--type-medium);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modal-content .map {
+  border-radius: 1em;
+}
+.modal-content .address p {
+  margin-bottom: 0;
+}
+.modal-content a {
+  text-decoration: underline;
+  text-color: var(--color-link);
+}
+.modal-footer {
+  border-top: 0;
+  padding-top: 0;
 }
 footer {
   margin-top: var(--space-medium);
@@ -330,6 +361,7 @@ footer {
 .fade-in {
   opacity: 0;
   animation: fade-in 0.8s ease-out forwards;
+  animation-delay: 1s;
 }
 @keyframes fade-in {
   0% {
